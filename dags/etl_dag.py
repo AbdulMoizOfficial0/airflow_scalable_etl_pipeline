@@ -16,7 +16,6 @@ default_args = {
     'retry_delay': timedelta(minutes=5),
 }
 
-
 dag = DAG(
     'etl_dag',
     default_args=default_args,
