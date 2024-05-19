@@ -1,0 +1,60 @@
+[2024-05-19T10:34:28.121+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-19T10:34:28.174+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.extract_task scheduled__2024-05-18T00:00:00+00:00 [queued]>
+[2024-05-19T10:34:28.187+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.extract_task scheduled__2024-05-18T00:00:00+00:00 [queued]>
+[2024-05-19T10:34:28.189+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2024-05-19T10:34:28.208+0000] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): extract_task> on 2024-05-18 00:00:00+00:00
+[2024-05-19T10:34:28.221+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=157) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-05-19T10:34:28.224+0000] {standard_task_runner.py:63} INFO - Started process 158 to run task
+[2024-05-19T10:34:28.225+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'extract_task', 'scheduled__2024-05-18T00:00:00+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmplhhygw05']
+[2024-05-19T10:34:28.230+0000] {standard_task_runner.py:91} INFO - Job 15: Subtask extract_task
+[2024-05-19T10:34:28.295+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_dag.extract_task scheduled__2024-05-18T00:00:00+00:00 [running]> on host 29bb0b57cbbf
+[2024-05-19T10:34:28.400+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='extract_task' AIRFLOW_CTX_EXECUTION_DATE='2024-05-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-18T00:00:00+00:00'
+[2024-05-19T10:34:28.403+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-19T10:34:28.439+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-19T10:34:28.440+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/etl_dag.py", line 29, in extract
+    from scripts.extract import extract_data
+ModuleNotFoundError: No module named 'scripts.extract'
+[2024-05-19T10:34:28.460+0000] {taskinstance.py:1205} INFO - Marking task as UP_FOR_RETRY. dag_id=etl_dag, task_id=extract_task, execution_date=20240518T000000, start_date=20240519T103428, end_date=20240519T103428
+[2024-05-19T10:34:28.488+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 15 for task extract_task (No module named 'scripts.extract'; 158)
+[2024-05-19T10:34:28.527+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-19T10:34:28.590+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-19T10:34:28.597+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-05-19T11:04:00.279+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-19T11:04:00.328+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.extract_task scheduled__2024-05-18T00:00:00+00:00 [queued]>
+[2024-05-19T11:04:00.349+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.extract_task scheduled__2024-05-18T00:00:00+00:00 [queued]>
+[2024-05-19T11:04:00.350+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2024-05-19T11:04:00.375+0000] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): extract_task> on 2024-05-18 00:00:00+00:00
+[2024-05-19T11:04:00.385+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=75) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-05-19T11:04:00.393+0000] {standard_task_runner.py:63} INFO - Started process 76 to run task
+[2024-05-19T11:04:00.388+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'extract_task', 'scheduled__2024-05-18T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmpnlnfg_tk']
+[2024-05-19T11:04:00.400+0000] {standard_task_runner.py:91} INFO - Job 4: Subtask extract_task
+[2024-05-19T11:04:00.573+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_dag.extract_task scheduled__2024-05-18T00:00:00+00:00 [running]> on host 91e113674000
+[2024-05-19T11:04:00.812+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='extract_task' AIRFLOW_CTX_EXECUTION_DATE='2024-05-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-18T00:00:00+00:00'
+[2024-05-19T11:04:00.815+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-19T11:04:11.994+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-05-19T11:04:11.996+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-19T11:04:12.013+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=etl_dag, task_id=extract_task, execution_date=20240518T000000, start_date=20240519T110400, end_date=20240519T110412
+[2024-05-19T11:04:12.099+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-19T11:04:12.149+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-05-19T11:04:12.154+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

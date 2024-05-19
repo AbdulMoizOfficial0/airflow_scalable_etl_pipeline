@@ -1,0 +1,40 @@
+[2024-05-19T10:39:29.785+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-19T10:39:29.816+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.extract_task manual__2024-05-19T10:34:23.585641+00:00 [queued]>
+[2024-05-19T10:39:29.827+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.extract_task manual__2024-05-19T10:34:23.585641+00:00 [queued]>
+[2024-05-19T10:39:29.828+0000] {taskinstance.py:2303} INFO - Starting attempt 2 of 2
+[2024-05-19T10:39:29.848+0000] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): extract_task> on 2024-05-19 10:34:23.585641+00:00
+[2024-05-19T10:39:29.857+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=230) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-05-19T10:39:29.860+0000] {standard_task_runner.py:63} INFO - Started process 233 to run task
+[2024-05-19T10:39:29.861+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'extract_task', 'manual__2024-05-19T10:34:23.585641+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmpsfdlymau']
+[2024-05-19T10:39:29.864+0000] {standard_task_runner.py:91} INFO - Job 16: Subtask extract_task
+[2024-05-19T10:39:29.936+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_dag.extract_task manual__2024-05-19T10:34:23.585641+00:00 [running]> on host 29bb0b57cbbf
+[2024-05-19T10:39:30.097+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='extract_task' AIRFLOW_CTX_EXECUTION_DATE='2024-05-19T10:34:23.585641+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-19T10:34:23.585641+00:00'
+[2024-05-19T10:39:30.099+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-19T10:39:30.171+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-19T10:39:30.172+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/etl_dag.py", line 29, in extract
+    from extract import extract_data
+ModuleNotFoundError: No module named 'extract'
+[2024-05-19T10:39:30.217+0000] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=etl_dag, task_id=extract_task, execution_date=20240519T103423, start_date=20240519T103929, end_date=20240519T103930
+[2024-05-19T10:39:30.279+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 16 for task extract_task (No module named 'extract'; 233)
+[2024-05-19T10:39:30.319+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-19T10:39:30.380+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-19T10:39:30.389+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

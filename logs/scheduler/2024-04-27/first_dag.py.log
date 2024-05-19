@@ -1,0 +1,155 @@
+[2024-04-27T17:41:11.258+0000] {processor.py:161} INFO - Started process (PID=221) to work on /opt/airflow/dags/first_dag.py
+[2024-04-27T17:41:11.261+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-04-27T17:41:11.291+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:41:11.286+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:41:11.389+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:41:11.369+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/first_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/first_dag.py", line 10, in <module>
+    'retry_delay': timedelta(minutes=5),
+                   ^^^^^^^^^
+NameError: name 'timedelta' is not defined
+[2024-04-27T17:41:11.394+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:41:11.479+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/first_dag.py took 0.294 seconds
+[2024-04-27T17:41:15.330+0000] {processor.py:161} INFO - Started process (PID=222) to work on /opt/airflow/dags/first_dag.py
+[2024-04-27T17:41:15.331+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-04-27T17:41:15.334+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:41:15.333+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:41:15.386+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:41:15.381+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/first_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/first_dag.py", line 31, in <module>
+    'retry_delay': timedelta(minutes=5),
+                   ^^^^^^^^^
+NameError: name 'timedelta' is not defined
+[2024-04-27T17:41:15.389+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:41:15.411+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/first_dag.py took 0.086 seconds
+[2024-04-27T17:41:47.537+0000] {processor.py:161} INFO - Started process (PID=229) to work on /opt/airflow/dags/first_dag.py
+[2024-04-27T17:41:47.545+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-04-27T17:41:47.581+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:41:47.572+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:41:47.916+0000] {processor.py:840} INFO - DAG(s) 'csv_transform_copy' retrieved from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:41:49.297+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:41:49.296+0000] {override.py:1829} INFO - Created Permission View: can edit on DAG:csv_transform_copy
+[2024-04-27T17:41:49.318+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:41:49.318+0000] {override.py:1829} INFO - Created Permission View: can delete on DAG:csv_transform_copy
+[2024-04-27T17:41:49.327+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:41:49.327+0000] {override.py:1829} INFO - Created Permission View: can read on DAG:csv_transform_copy
+[2024-04-27T17:41:49.328+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:41:49.328+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-04-27T17:41:49.361+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:41:49.361+0000] {dag.py:3118} INFO - Creating ORM DAG for csv_transform_copy
+[2024-04-27T17:41:49.364+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:41:49.363+0000] {dag.py:3954} INFO - Setting next_dagrun for csv_transform_copy to None, run_after=None
+[2024-04-27T17:41:49.406+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/first_dag.py took 1.965 seconds
+[2024-04-27T17:42:29.298+0000] {processor.py:161} INFO - Started process (PID=230) to work on /opt/airflow/dags/first_dag.py
+[2024-04-27T17:42:29.307+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-04-27T17:42:29.427+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:42:29.420+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:42:29.963+0000] {processor.py:840} INFO - DAG(s) 'csv_transform_copy' retrieved from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:42:31.704+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:42:31.700+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-04-27T17:42:31.747+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:42:31.747+0000] {dag.py:3954} INFO - Setting next_dagrun for csv_transform_copy to None, run_after=None
+[2024-04-27T17:42:31.799+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/first_dag.py took 2.656 seconds
+[2024-04-27T17:43:02.314+0000] {processor.py:161} INFO - Started process (PID=237) to work on /opt/airflow/dags/first_dag.py
+[2024-04-27T17:43:02.316+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-04-27T17:43:02.319+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:43:02.319+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:43:02.360+0000] {processor.py:840} INFO - DAG(s) 'csv_transform_copy' retrieved from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:43:02.407+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:43:02.407+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-04-27T17:43:02.425+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:43:02.425+0000] {dag.py:3954} INFO - Setting next_dagrun for csv_transform_copy to None, run_after=None
+[2024-04-27T17:43:02.446+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/first_dag.py took 0.137 seconds
+[2024-04-27T17:43:32.580+0000] {processor.py:161} INFO - Started process (PID=244) to work on /opt/airflow/dags/first_dag.py
+[2024-04-27T17:43:32.582+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-04-27T17:43:32.586+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:43:32.586+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:43:32.627+0000] {processor.py:840} INFO - DAG(s) 'csv_transform_copy' retrieved from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:43:32.674+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:43:32.674+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-04-27T17:43:32.694+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:43:32.694+0000] {dag.py:3954} INFO - Setting next_dagrun for csv_transform_copy to None, run_after=None
+[2024-04-27T17:43:32.724+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/first_dag.py took 0.152 seconds
+[2024-04-27T17:44:03.104+0000] {processor.py:161} INFO - Started process (PID=257) to work on /opt/airflow/dags/first_dag.py
+[2024-04-27T17:44:03.106+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-04-27T17:44:03.108+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:44:03.108+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:44:03.158+0000] {processor.py:840} INFO - DAG(s) 'csv_transform_copy' retrieved from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:44:03.201+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:44:03.200+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-04-27T17:44:03.214+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:44:03.214+0000] {dag.py:3954} INFO - Setting next_dagrun for csv_transform_copy to None, run_after=None
+[2024-04-27T17:44:03.237+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/first_dag.py took 0.139 seconds
+[2024-04-27T17:44:33.722+0000] {processor.py:161} INFO - Started process (PID=264) to work on /opt/airflow/dags/first_dag.py
+[2024-04-27T17:44:33.723+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-04-27T17:44:33.727+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:44:33.727+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:44:33.774+0000] {processor.py:840} INFO - DAG(s) 'csv_transform_copy' retrieved from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:44:33.806+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:44:33.806+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-04-27T17:44:33.820+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:44:33.820+0000] {dag.py:3954} INFO - Setting next_dagrun for csv_transform_copy to None, run_after=None
+[2024-04-27T17:44:33.840+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/first_dag.py took 0.127 seconds
+[2024-04-27T17:44:41.859+0000] {processor.py:161} INFO - Started process (PID=265) to work on /opt/airflow/dags/first_dag.py
+[2024-04-27T17:44:41.864+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-04-27T17:44:41.868+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:44:41.868+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:44:41.932+0000] {processor.py:840} INFO - DAG(s) 'csv_transform_copy' retrieved from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:44:42.455+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:44:42.455+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-04-27T17:44:44.466+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:44:44.466+0000] {dag.py:3954} INFO - Setting next_dagrun for csv_transform_copy to None, run_after=None
+[2024-04-27T17:44:44.535+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/first_dag.py took 2.688 seconds
+[2024-04-27T17:45:14.908+0000] {processor.py:161} INFO - Started process (PID=272) to work on /opt/airflow/dags/first_dag.py
+[2024-04-27T17:45:14.910+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-04-27T17:45:14.918+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:45:14.914+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:45:14.973+0000] {processor.py:840} INFO - DAG(s) 'csv_transform_copy' retrieved from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:45:15.064+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:45:15.064+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-04-27T17:45:15.081+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:45:15.081+0000] {dag.py:3954} INFO - Setting next_dagrun for csv_transform_copy to None, run_after=None
+[2024-04-27T17:45:15.105+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/first_dag.py took 0.210 seconds
+[2024-04-27T17:45:45.462+0000] {processor.py:161} INFO - Started process (PID=279) to work on /opt/airflow/dags/first_dag.py
+[2024-04-27T17:45:45.465+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-04-27T17:45:45.471+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:45:45.470+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:45:45.529+0000] {processor.py:840} INFO - DAG(s) 'csv_transform_copy' retrieved from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:45:45.615+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:45:45.615+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-04-27T17:45:45.654+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:45:45.653+0000] {dag.py:3954} INFO - Setting next_dagrun for csv_transform_copy to None, run_after=None
+[2024-04-27T17:45:45.693+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/first_dag.py took 0.253 seconds
+[2024-04-27T17:46:15.925+0000] {processor.py:161} INFO - Started process (PID=287) to work on /opt/airflow/dags/first_dag.py
+[2024-04-27T17:46:15.926+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-04-27T17:46:15.928+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:46:15.928+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:46:15.995+0000] {processor.py:840} INFO - DAG(s) 'csv_transform_copy' retrieved from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:46:16.033+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:46:16.033+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-04-27T17:46:16.049+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:46:16.049+0000] {dag.py:3954} INFO - Setting next_dagrun for csv_transform_copy to None, run_after=None
+[2024-04-27T17:46:16.072+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/first_dag.py took 0.153 seconds
+[2024-04-27T17:46:46.379+0000] {processor.py:161} INFO - Started process (PID=295) to work on /opt/airflow/dags/first_dag.py
+[2024-04-27T17:46:46.381+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-04-27T17:46:46.385+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:46:46.384+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:46:46.457+0000] {processor.py:840} INFO - DAG(s) 'csv_transform_copy' retrieved from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:46:46.498+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:46:46.498+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-04-27T17:46:46.514+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:46:46.513+0000] {dag.py:3954} INFO - Setting next_dagrun for csv_transform_copy to None, run_after=None
+[2024-04-27T17:46:46.542+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/first_dag.py took 0.171 seconds
+[2024-04-27T17:47:15.625+0000] {processor.py:161} INFO - Started process (PID=296) to work on /opt/airflow/dags/first_dag.py
+[2024-04-27T17:47:15.626+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-04-27T17:47:15.629+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:47:15.628+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:47:15.669+0000] {processor.py:840} INFO - DAG(s) 'csv_transform_copy' retrieved from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:47:16.556+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:47:16.556+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-04-27T17:47:16.565+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:47:16.565+0000] {dag.py:3954} INFO - Setting next_dagrun for csv_transform_copy to None, run_after=None
+[2024-04-27T17:47:16.595+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/first_dag.py took 0.978 seconds
+[2024-04-27T17:47:47.015+0000] {processor.py:161} INFO - Started process (PID=309) to work on /opt/airflow/dags/first_dag.py
+[2024-04-27T17:47:47.016+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-04-27T17:47:47.019+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:47:47.019+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:47:47.049+0000] {processor.py:840} INFO - DAG(s) 'csv_transform_copy' retrieved from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:47:47.076+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:47:47.076+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-04-27T17:47:47.088+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:47:47.088+0000] {dag.py:3954} INFO - Setting next_dagrun for csv_transform_copy to None, run_after=None
+[2024-04-27T17:47:47.111+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/first_dag.py took 0.103 seconds
+[2024-04-27T17:48:17.431+0000] {processor.py:161} INFO - Started process (PID=316) to work on /opt/airflow/dags/first_dag.py
+[2024-04-27T17:48:17.432+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-04-27T17:48:17.447+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:48:17.447+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:48:17.483+0000] {processor.py:840} INFO - DAG(s) 'csv_transform_copy' retrieved from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:48:17.514+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:48:17.514+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-04-27T17:48:17.526+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:48:17.526+0000] {dag.py:3954} INFO - Setting next_dagrun for csv_transform_copy to None, run_after=None
+[2024-04-27T17:48:17.545+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/first_dag.py took 0.120 seconds
+[2024-04-27T17:48:24.538+0000] {processor.py:161} INFO - Started process (PID=317) to work on /opt/airflow/dags/first_dag.py
+[2024-04-27T17:48:24.539+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-04-27T17:48:24.544+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:48:24.543+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:48:24.589+0000] {processor.py:840} INFO - DAG(s) 'csv_transform_copy' retrieved from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:48:24.796+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:48:24.796+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-04-27T17:48:24.812+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:48:24.812+0000] {dag.py:3954} INFO - Setting next_dagrun for csv_transform_copy to None, run_after=None
+[2024-04-27T17:48:24.839+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/first_dag.py took 0.314 seconds
+[2024-04-27T17:48:55.301+0000] {processor.py:161} INFO - Started process (PID=325) to work on /opt/airflow/dags/first_dag.py
+[2024-04-27T17:48:55.306+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-04-27T17:48:55.314+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:48:55.314+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:48:55.358+0000] {processor.py:840} INFO - DAG(s) 'csv_transform_copy' retrieved from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:48:55.549+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:48:55.549+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-04-27T17:48:55.563+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:48:55.563+0000] {dag.py:3118} INFO - Creating ORM DAG for csv_transform_copy
+[2024-04-27T17:48:55.564+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:48:55.564+0000] {dag.py:3954} INFO - Setting next_dagrun for csv_transform_copy to None, run_after=None
+[2024-04-27T17:48:55.585+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/first_dag.py took 0.301 seconds
+[2024-04-27T17:50:12.122+0000] {processor.py:161} INFO - Started process (PID=338) to work on /opt/airflow/dags/first_dag.py
+[2024-04-27T17:50:12.126+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/first_dag.py for tasks to queue
+[2024-04-27T17:50:12.128+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:50:12.127+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:50:12.130+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/first_dag.py
+[2024-04-27T17:50:12.251+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:50:12.250+0000] {taskinstance.py:2892} ERROR - {'DAG Id': 'csv_transform_copy', 'Task Id': 'transform_csv', 'Run Id': 'manual__2024-04-27T17:49:43.618209+00:00', 'Hostname': 'ff7143738b80', 'External Executor Id': 'e1c634dc-0c56-4792-98a5-8b1363cef1f0'}
+[2024-04-27T17:50:12.344+0000] {logging_mixin.py:188} INFO - [2024-04-27T17:50:12.342+0000] {taskinstance.py:1205} INFO - Marking task as UP_FOR_RETRY. dag_id=csv_transform_copy, task_id=transform_csv, execution_date=20240427T174943, start_date=20240427T174947, end_date=20240427T175012
+[2024-04-27T17:50:12.380+0000] {processor.py:791} INFO - Executed failure callback for <TaskInstance: csv_transform_copy.transform_csv manual__2024-04-27T17:49:43.618209+00:00 [up_for_retry]> in state up_for_retry
+[2024-04-27T17:50:12.385+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/first_dag.py took 0.284 seconds

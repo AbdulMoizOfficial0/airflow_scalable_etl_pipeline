@@ -1,0 +1,2 @@
+input_folder: /opt/airflow/data_input
+output_folder: /opt/airflow/data_output

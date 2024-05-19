@@ -1,0 +1,18 @@
+[2024-04-27T18:03:57.178+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-04-27T18:03:57.234+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: csv_transform_copy.process_csv manual__2024-04-27T18:03:45.982335+00:00 [queued]>
+[2024-04-27T18:03:57.257+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: csv_transform_copy.process_csv manual__2024-04-27T18:03:45.982335+00:00 [queued]>
+[2024-04-27T18:03:57.259+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2024-04-27T18:03:57.292+0000] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): process_csv> on 2024-04-27 18:03:45.982335+00:00
+[2024-04-27T18:03:57.323+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=528) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-04-27T18:03:57.329+0000] {standard_task_runner.py:63} INFO - Started process 530 to run task
+[2024-04-27T18:03:57.330+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'csv_transform_copy', 'process_csv', 'manual__2024-04-27T18:03:45.982335+00:00', '--job-id', '50', '--raw', '--subdir', 'DAGS_FOLDER/csv_dag.py', '--cfg-path', '/tmp/tmpuaj7u_b9']
+[2024-04-27T18:03:57.338+0000] {standard_task_runner.py:91} INFO - Job 50: Subtask process_csv
+[2024-04-27T18:03:57.523+0000] {task_command.py:426} INFO - Running <TaskInstance: csv_transform_copy.process_csv manual__2024-04-27T18:03:45.982335+00:00 [running]> on host ff7143738b80
+[2024-04-27T18:04:08.724+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 50 for task process_csv ((psycopg2.OperationalError) could not translate host name "postgres" to address: Temporary failure in name resolution
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8); 530)
+[2024-04-27T18:04:16.120+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-04-27T18:04:16.148+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-04-27T18:04:16.152+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
